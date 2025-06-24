@@ -1,0 +1,71 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Optional styling biar CKEditor-nya gak terlalu tinggi -->
+<style>
+  .ck-editor__editable_inline {
+    min-height: 300px;
+  }
+</style>
+
+<div class="row mt-4">
+  <div class="col-lg-9 col-12 mx-auto position-relative">
+    <div class="card">
+      <div class="card-header p-3 pt-2">
+        <div class="icon icon-lg icon-shape bg-gradient-dark shadow text-center border-radius-xl mt-n4 me-3 float-start">
+          <i class="material-icons opacity-10">event</i>
+        </div>
+        <h6 class="mb-0">Tambah Artikel</h6>
+      </div>
+
+      <!-- INI WAJIB: form.media akan load CSS & JS ckeditor -->
+      {{ forms.media }}
+
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="card-body pt-2">
+
+          <div class="mb-3">
+            <label class="form-label">Judul</label>
+            {{ forms.judul }}
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Isi</label>
+            {{ forms.isi }}
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Kategori</label>
+            {{ forms.kategori }}
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Gambar</label>
+            {{ forms.gambar }}
+          </div>
+
+          <div class="d-flex justify-content-end mt-4">
+            <button type="submit" class="btn bg-gradient-dark m-0 ms-2">Simpan</button>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block js %}
+<!-- JS milik dashboard -->
+<script src="{% static 'dashboard/assets/js/material-dashboard.min.js' %}"></script>
+<script src="{% static 'dashboard/assets/js/plugins/choices.min.js' %}"></script>
+<script src="{% static 'dashboard/assets/js/plugins/quill.min.js' %}"></script>
+<script src="{% static 'dashboard/assets/js/plugins/flatpickr.min.js' %}"></script>
+<script src="{% static 'dashboard/assets/js/plugins/dropzone.min.js' %}"></script>
+
+<!-- CKEditor 5 WAJIB -->
+<script src="{% static 'django_ckeditor_5/dist/bundle.js' %}"></script>
+<script src="{% static 'django_ckeditor_5/init.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,14 @@
+_pycache_/
+*.py[cod]
+*.sqlite3
+.env
+/static/
+media/
+db.sqlite3
+*.log
+*.pot
+*.pyc
+*.pyo
+.DS_Store
+node_modules/
+*.vscode
