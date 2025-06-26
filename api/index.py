@@ -1,1 +1,1 @@
-from blogku.wsgi import application as app
+from blogku.wsgi import application
