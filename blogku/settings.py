@@ -16,7 +16,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-b&um#gnqq$ehes29#wld-da@ki95_hg$1mp-p7hp4zv68^rutv'
 
 
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['ghaidsa.pythonanywhere.com']
 
 
@@ -107,7 +107,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),  # Folder tempat kamu taruh CSS, JS, dan gambar saat development
+    os.path.join(BASE_DIR, 'accounts/static'),  # Folder tempat kamu taruh CSS, JS, dan gambar saat development
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Folder tujuan untuk hasil collectstatic
