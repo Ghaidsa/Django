@@ -10,8 +10,9 @@ from blogku.authentication import login, logout, registrasi
 
 
 urlpatterns = [
+    path('', index),
     path('admin/', admin.site.urls),
-     path("ckeditor5/", include('django_ckeditor_5.urls')),
+    path("ckeditor5/", include('django_ckeditor_5.urls')),
     path('', views.home, name='home'),
     path('artikel/<int:id>/', views.detail_artikel, name='detail_artikel'),
     path('about/', views.about_author, name='about_author'),
