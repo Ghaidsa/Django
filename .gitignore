@@ -1,14 +1,37 @@
+# Python
 _pycache_/
 *.py[cod]
-*.sqlite3
-.env
-/static/
-media/
-db.sqlite3
-*.log
-*.pot
-*.pyc
 *.pyo
+
+# Virtual env
+env/
+venv/
+ENV/
+*.env
+
+# Django files
+*.sqlite3
+db.sqlite3
+
+# IDE/editor
+.vscode/
+.idea/
+
+# OS files
 .DS_Store
+Thumbs.db
+
+# Static/media (jika disimpan secara lokal)
+staticfiles/
+media/
+
+# Logs
+*.log
+
+# Node modules (jika pakai frontend build)
 node_modules/
-*.vscode
+
+# Migrations (opsional)
+*/migrations/.pyc
+*/migrations/.pyo
+**/migrations/_pycache_/
