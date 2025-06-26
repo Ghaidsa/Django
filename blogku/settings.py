@@ -16,8 +16,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-b&um#gnqq$ehes29#wld-da@ki95_hg$1mp-p7hp4zv68^rutv'
 
 
-DEBUG = False
-ALLOWED_HOSTS = ['ghaidsa.pythonanywhere.com']
+DEBUG = True
+ALLOWED_HOSTS = []
 
 
 
@@ -70,8 +70,12 @@ WSGI_APPLICATION = 'blogku.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'artikel_blog',        # nama database kamu di phpMyAdmin
+        'USER': 'root',                  # default user XAMPP
+        'PASSWORD': '',                  # default password kosong
+        'HOST': '127.0.0.1',             # atau 'localhost'
+        'PORT': '3306',                  # port default MySQL
     }
 }
 
