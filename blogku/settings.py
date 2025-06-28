@@ -71,7 +71,7 @@ WSGI_APPLICATION = 'blogku.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'artikel_blog',        # nama database kamu di phpMyAdmin
+        'NAME': 'blogku',        # nama database kamu di phpMyAdmin
         'USER': 'root',                  # default user XAMPP
         'PASSWORD': '',                  # default password kosong
         'HOST': '127.0.0.1',             # atau 'localhost'
