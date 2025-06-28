@@ -4,6 +4,7 @@ __pycache__/
 *.pyo
 
 # Virtual env
+bima_venv/
 env/
 venv/
 ENV/
@@ -21,9 +22,9 @@ db.sqlite3
 .DS_Store
 Thumbs.db
 
-# Static/media (jika disimpan secara lokal)
-staticfiles/
-media/
+# # Static/media (jika disimpan secara lokal)
+# staticfiles/
+# media/
 
 # Logs
 *.log
